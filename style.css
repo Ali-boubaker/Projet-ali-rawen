@@ -2,7 +2,7 @@
 body {
     background-repeat: no-repeat;
     background-size: cover;
-    background: url('2.JPG');
+    background: url('8.JPG');
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -56,7 +56,7 @@ div {
     z-index: 1;
     height: 85px;
 }    
-//
+
 
 #add {
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@ div {
     z-index: 1;
     height: 85px;
 }    
-// 
+
 #listen {
     background-repeat: no-repeat;
     background-size: cover;
@@ -170,7 +170,7 @@ div {
     border-radius: 50%;
     position : absolute ;
     right: 2%;    
-    z-index: 1;
+    z-index: -1;
     height: 85px;
 }    
 form.example input[type=text] {
@@ -205,4 +205,16 @@ form.example input[type=text] {
     content: "";
     clear: both;
     display: table;
+  }
+
+  .c-form__input{
+      position: relative;
+      top: -50px;
+  }
+  .c-form__button {
+  position: relative;
+      top: -50px;
+  }
+  .sar{
+      text-decoration: none;
   }

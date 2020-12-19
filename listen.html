@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE >
 <html lang="en">
 <head>
 <link href="style.css" rel="stylesheet" type="text/css" />
@@ -21,14 +21,15 @@ background-image: url("5.jpg");
 <a style="color: white" type="button" onclick="myFunction()" href="file:///C:/Users/King/Desktop/project%20with%20rawen/index.html" class="active" href="#home">Home</a>
  <div class="topnavlisten-right">
 <a style="color: white" type="button" onclick="myFunction1()" href="file:///C:/Users/King/Desktop/project%20with%20rawen/listen.html" >Listen </a>
-<a style="color: white" type="button" onclick="myFunction2()" href="file:///C:/Users/King/Desktop/project%20with%20rawen/download.html">Download </a>
+
 <a style="color: white" type="button" onclick="myFunction3()" href="file:///C:/Users/King/Desktop/project%20with%20rawen/add.html"> ADD + </a>
+
 <input class="c-checkbox" type="checkbox" id="checkbox">
-<div class="c-formContainer">
+<div class="c-formContainer" style="margin-left: -280%; margin-top: 10px;">
   <form class="c-form" action="">
-<input class="c-form__input" placeholder="search" type="search" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
-<label class="c-form__buttonLabel" for="checkbox">
-  <button class="c-form__button" type="button">&#x266C;</button>
+<input  class="c-form__input" placeholder="search" type="search" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+<label class="c-form__buttonLabel" for="checkbox"></label>
+  <button class="c-form__button" type="button" onclick="search()">&#x266C;</button>
 </label>
 <label class="c-form__toggle" for="checkbox" data-title="Notify me"></label>
   </form>
@@ -36,15 +37,21 @@ background-image: url("5.jpg");
 </div>
 </div>
    
-<ul>
+<ul class='sar'>
     <li>
  <button id="play1">Travis Scott - Astronomical </button>
 <audio controls id="song1">
-<source src="Travis Scott and Fortnite Present Astronomical (Full Event Video).ogg" type="audio/ogg">
-<source src="Travis Scott and Fortnite Present Astronomical (Full Event Video).mp3" type="audio/mpeg">
+<source src="Travis Scott Astronomical.ogg" type="audio/ogg">
+<source src="Travis Scott Astronomical.ogg.mp3" type="audio/mpeg">
 </audio>
     </li> 
-  
+    <li>
+        <button id="play3">Travis Scott - Astronomical </button>
+       <audio controls id="song3">
+       <source src="Travis Scott - SICKO MODE (Audio).ogg" type="audio/ogg">
+       <source src="Travis Scott - SICKO MODE (Audio).mp3" type="audio/mpeg">
+       </audio>
+           </li> 
  
      <li>
  <button id="play2">Travis Scott - HIGHEST IN THE ROOM</button>
@@ -55,41 +62,65 @@ background-image: url("5.jpg");
     </li>
 
 </ul> 
-   <script>
-$("#song1").hide()
-$("#play1").click(function(){
-$("#song1").toggle()
-})
-</script>
 <script>
-$("#song2").hide()
-$("#play2").click(function(){
-$("#song2").toggle()
-})
-</script>
+    $("#play1").hide()
+     $("#play2").hide()
+     $("#play3").hide()
+ $("#song1").hide()
+ $("#play1").click(function(){
+ $("#song1").toggle()
+ }) 
+ $("#song2").hide()
+ $("#play2").click(function(){
+ $("#song2").toggle()
+ })
+ $("#song3").hide()
+ $("#play3").click(function(){
+ $("#song3").toggle()
+ })
+ var songs = [
+    "Travis Scott - HIGHEST IN THE ROOM.ogg",
+    "Travis Scott - HIGHEST IN THE ROOM.mp3" ,
+
+   "Travis Scott Astronomical.ogg",
+   "Travis Scott Astronomical.mp3",
 
 
-
-
-
-
+   "Travis Scott - SICKO MODE (Audio).ogg",
+    "Travis Scott - SICKO MODE (Audio).mp3",
+]
+  function search(){
+var song = $(".c-form__input").val()
+console.log(song)
+    for ( var i = 0 ; i < songs.length ; i++ ){
+      if(song===songs[i]){
+        var a = i + 1 ; 
+        $("#song"+ a ).toggle()
+        return;  
+    }     
+    }
+    alert("song doesn't exist")
+  }
+  </script>
+  <script>
+    $("#song1").hide()
+    $("#play1").click(function(){
+    $("#song1").toggle()
+    </script>
 
 
 <script>
 function myFunction() {
-location.replace("file:///C:/Users/King/Desktop/project%20with%20rawen/index.html")}
+location.replace("index.html")}
 </script>
 <script>
 function myFunction1() {
-location.replace("file:///C:/Users/King/Desktop/project%20with%20rawen/index.html")}
+location.replace("index.html")}
 </script>
-<script>
-function myFunction2() {
-location.replace("file:///C:/Users/King/Desktop/project%20with%20rawen/index.html")}
-</script>
+
 <script>
 function myFunction3() {
-location.replace("file:///C:/Users/King/Desktop/project%20with%20rawen/index.html")}
+location.replace("index.html")}
 </script>
 
 
